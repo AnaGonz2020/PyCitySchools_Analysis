@@ -17,7 +17,7 @@ PyCitySchools This folder contains the Pandas Challenge
 # Results
 
 A full analysis of the PyCitySchools data can be reviewed here: [PyCitySchools Analysis](./PyCity_Schools/analysis/PyCitySchools_Analysis) <br></br>
-
+![Analysis Snapshot](/Pandas-Challenge/PyCity_Schools/Resources/analysis_snap.PNG)
 
 # Comments and Thoughts
 As scared and intimidated as I was coming in to the Pandas Module, I am happy with the experience this challenge gave me. Throughout my time working on this challenge, I rode the emotional roller coaster of 'do I know what I am doing?', 'should I continue this?'. With not just the support at home, but all the help the Instructor and TA provide and the additional support on Slack, I was able to push through it. I have been fortunate enough to have met some awesome classmates, who, without a doubt, helped me so much in completing this challenge when I hit a KeyError that stumped many a people. With the Study Group we created, I have been able to hear other's experience and how they are doing. 

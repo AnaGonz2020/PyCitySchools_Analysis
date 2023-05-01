@@ -1,4 +1,51 @@
-# Analysis
-Although it took me longer than the anticipated timeframe to complete, I am so excited to share my results with you. The code generated goes through the provided CSV files, and retrieves the requested data utilizing functions to call these actions. In the formatting of my dataframes, I was unable to master the decimal positioning, but I formatted them as best as I could.
+# PyCity School Analysis 
 
-Using the two datasets provided, students_complete.csv and schools_complete.csv, I have completed a few calculations, and have come up with the final conclusion- Charter schools have the higher scoring students. With larger classes in District Schools, there is not enough resources to support students, whereas Charters (up to 2000), with their smaller classes, teachers are able to provide a more in depth experience and environment. 
+The purpose of this analysis is to utilize Pandas to analyze school data provided, and determine if there are advantages or disadvantages between Charter and District schools when it comes to math and reading scores.
+
+Utilizing the two provided data sets, students_complete.csv and schools_complete.csv, I was able to read in the files using `read_csv()` and thereafter, I used the `merge()` function to merge the files on the "school_name" column.<br></br>
+![Merged and Cleaned data table](/Pandas-Challenge/PyCity_Schools/Resources/cleaned_df.PNG)
+
+# District Summary
+
+For the District summary, I performed the necessary calculations to create a high-level snapshot of the district's key metrics to include the following:
+
+* **Total number of unique schools:** to obtain this information, I used the `nunique()` function and found that the dataframe contained a total of **15** schools.
+
+* **Total students:** For total students, I also used the `nunique.()` function and found the total number of students is **39170**.
+
+* **Total budget:** In order to calculate the total budget, I used the `sum()` function and calculated the total budget to be **$2469428**.
+
+* **Average math score:** Using `mean()` we calculated the average math score to be **78.98%**
+
+* **Average reading score:** Using `mean()` again, I calculated the average reading score to be **81.87%**
+
+* **Percent passing math (the percentage of students who passed math):** Using the `count()` function, I was able to pull all student with the passing math score of 70% or higher and discovered the percent passing math is **74.98%**
+
+* **Percent passing reading (the percentage of students who passed reading):** using the same process as the math percent, I found that **85.80%** of student are passing reading with 70% or higher.
+
+* **Percent overall passing (the percentage of students who passed math AND reading):** I also needed to find the overall passing percentage, so I combined both the passing math and passing and found that only **65.17%** of students are passing.<br></br>
+![District Summary](/Pandas-Challenge/PyCity_Schools/Resources/district_summary.PNG)
+
+# School Summary
+For the School summary, I performed the necessary calculations to create a DataFrame that summarizes key metrics about each school to include the following:
+
+* **School name & School type:** I used the `set_index()` function so that I would be able to select the school types for all schools as well as their names.<br></br>
+![School name and types](/Pandas-Challenge/PyCity_Schools/Resources/school_types.PNG)
+
+* **Total students:** Using `value_counts()` again, I was able to retrieve the total number of students in each school.<br></br>
+![Student count per school](/Pandas-Challenge/PyCity_Schools/Resources/student_count.PNG)
+
+* **Total per school budget & Per student budget:** To calculate the school budgets and per capita spending, I used the `groupby()` function at "school_name" and then took the `mean()` of the "budget" column. Then, to calculate the per capita spending, we divided the schools' budgets by the per school student count.<br></br>
+![Budgets per school](/Pandas-Challenge/PyCity_Schools/Resources/budget_percapita.PNG)
+![Per Capita Spending](/Pandas-Challenge/PyCity_Schools/Resources/per_studentspend.PNG)
+
+* **Average math score & Average reading score:** Using the same functions as above, I was able to retrieve the average math and reading scores for each school. <br></br>
+![Math Scores per school](/Pandas-Challenge/PyCity_Schools/Resources/math_score.PNG)
+![Reading Scores per school](/Pandas-Challenge/PyCity_Schools/Resources/reading_score.PNG)
+
+# Summary
+* As a whole, schools with higher budgets, did not yield better test results. By contrast, schools with higher spending 645-675 per student actually underperformed compared to schools with smaller budgets (585 per student).
+
+* As a whole, smaller and medium sized schools dramatically out-performed large sized schools on passing math performances (89-91% passing vs 67%).
+
+* As a whole, charter schools out-performed the public district schools across all metrics. However, more analysis will be required to glean if the effect is due to school practices or the fact that charter schools tend to serve smaller student populations per school. 
