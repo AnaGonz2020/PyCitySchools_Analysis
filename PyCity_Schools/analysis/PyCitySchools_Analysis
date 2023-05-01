@@ -1,3 +1,4 @@
 # Analysis
+Although it took me longer than the anticipated timeframe to complete, I am so excited to share my results with you. The code generated goes through the provided CSV files, and retrieves the requested data utilizing functions to call these actions. In the formatting of my dataframes, I was unable to master the decimal positioning, but I formatted them as best as I could.
 
 Using the two datasets provided, students_complete.csv and schools_complete.csv, I have completed a few calculations, and have come up with the final conclusion- Charter schools have the higher scoring students. With larger classes in District Schools, there is not enough resources to support students, whereas Charters (up to 2000), with their smaller classes, teachers are able to provide a more in depth experience and environment. 
